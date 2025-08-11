@@ -15,13 +15,11 @@ for i in range(a):
     if dp[i] == factorial(i):
         print("Factorial consistent wit Dynamic programming solution")
 
-vector<int> arr(a,0) #Oops wrong language
+a = 19 
 
-a = 19 This seems fine right? oh wait I forgot this was a comment
-
-for i in range(a)
-a +=1
-print(a)
+for i in range(a):
+    a +=1
+    print(a)
 
 #Aha Indentation and colon missing
 
