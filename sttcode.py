@@ -1,33 +1,31 @@
-def factorial(a): ## Hmm infinte recursion
-    return a * factorial(a-1)
+"""Factorial comparison with dynamic programming and bitwise operations."""
 
-def iAmUnused(): #This is unused 
-    pass 
+def factorial(n):
+    """Recursive factorial with base case to avoid infinite recursion."""
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)
 
-a = 15
-dp = [1]*a
-for i in range(a):
-    if i == 0:
-        continue
-    dp[i] = dp[i-1] * i
+LIMIT = 15
+dp = [1] * LIMIT
+for i in range(1, LIMIT):
+    dp[i] = dp[i - 1] * i
 
-for i in range(a):
+for i in range(LIMIT):
     if dp[i] == factorial(i):
-        print("Factorial consistent wit Dynamic programming solution")
+        print("Factorial consistent with Dynamic programming solution")
 
-a = 19 
+start_value = 19
+counter = 0
+while counter < 10:
+    start_value += 1
+    print(start_value)
+    counter += 1
 
-for i in range(a):
-    a +=1
-    print(a)
+# Let's add some good code below again
 
-#Aha Indentation and colon missing
-
-#Lets add some good code below again but maybe unformated   
-z = 101010 #unused
-
-m = 18
-n = m + 18            
-n = m*m
-m = n | (n-1)
-print(m,n)
+x = 18
+y = x + 18
+y = x * x
+x = y | (y - 1)
+print(x, y)
